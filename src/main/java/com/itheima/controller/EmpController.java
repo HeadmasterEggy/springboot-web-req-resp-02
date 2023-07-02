@@ -14,14 +14,14 @@ public class EmpController {
     private EmpService empService = new EmpServiceA();
 
     @RequestMapping("/listEmp")
-    public Result list(){
+    public Result list() {
         //1. 调用service, 获取数据
         List<Emp> empList = empService.listEmp();
 
         //3. 响应数据
         return Result.success(empList);
     }
-
+}
 
     /*@RequestMapping("/listEmp")
     public Result list(){
@@ -56,4 +56,3 @@ public class EmpController {
     }
 */
 
-}
